@@ -49,14 +49,14 @@ public class BowlingGameTest {
 
     @Test
     @DisplayName("Score given perfect game should be 300")
-    void Score_GivenPerfectGame_ShouldBe360() {
+    void Score_GivenPerfectGame_ShouldBe300() {
         rollMany(12, 10);
-        assertEquals(360, game.score());
+        assertEquals(300, game.score());
     }
 
     @Test
     @DisplayName("Score given extra roll for spare in tenth frame should be 15")
-    void Score_GivenExtraRollForSpareInTenthFrame_ShouldBeTwenty() {
+    void Score_GivenExtraRollForSpareInTenthFrame_ShouldBe15() {
         rollMany(18, 0);
         rollSpare();
         game.roll(5);
@@ -64,8 +64,8 @@ public class BowlingGameTest {
     }
 
     @Test
-    @DisplayName("Score given extra roll for strike in tenth frame should be 20")
-    void Score_GivenExtraRollForStrikeInTenthFrame_ShouldBeTwenty() {
+    @DisplayName("Score given extra roll for strike in tenth frame should be 17")
+    void Score_GivenExtraRollForStrikeInTenthFrame_ShouldBe17() {
         rollMany(18, 0);
         rollStrike();
         game.roll(3);
